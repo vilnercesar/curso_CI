@@ -9,4 +9,3 @@ func main() {
 	database.ConectaComBancoDeDados()
 	routes.HandleRequest()
 }
-//kojgkjdfg
