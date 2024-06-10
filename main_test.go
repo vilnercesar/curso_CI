@@ -100,7 +100,7 @@ func TestDeletaAlunoHandler(t *testing.T) {
 	r.ServeHTTP(resposta, req)
 	assert.Equal(t, http.StatusOK, resposta.Code)
 }
-
+//asdasdasd
 func TestEditaUmAlunoHandler(t *testing.T) {
 	database.ConectaComBancoDeDados()
 	CriaAlunoMock()
