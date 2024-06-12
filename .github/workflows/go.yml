@@ -16,7 +16,7 @@ jobs:
     strategy: 
       matrix:
         go_version: ['1.18', '1.17','>=1.18']
-        os: [ubuntu-latest, windows-11]
+        os: [ubuntu-latest,windows-2022]
 
     steps:
     - uses: actions/checkout@v4
@@ -37,7 +37,11 @@ jobs:
     
   build:
    needs: test
-   runs-on: ubuntu-latest
+   runs-on:  ${{ matrix.os }}
+   strategy: 
+      matrix:
+        go_version: ['1.18', '1.17','>=1.18']
+        os: [ubuntu-latest,windows-2022]
    steps:
       - uses: actions/checkout@v4
       - name: Build
